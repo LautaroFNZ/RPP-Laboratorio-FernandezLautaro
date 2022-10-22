@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperatorio Primer Parcial</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div>
+        <form id="FrmDatos">
+            <h1>Formulario Datos</h1>
+            <div class="Filtro">
+                <label for="">Filtrar por:</label>
+                <select name="filtroTipo" id="filtroTipo">
+                    <option value="vTodos">Todos</option>
+                    <option value="vAereo">Aereo</option>
+                    <option value="vTerrestre">Terrestre</option>
+                </select>
+            </div>
+
+            <div class="Calculador">
+                <label for="">Promedio Velocidad Maxima</label>
+                <input type="text" id="mostrarPromedio" placeholder="Aqui se mostrará el promedio" readonly="true">
+                <button id="btnPromedio">Calcular</button>
+            </div>
+
+            
+            <label for="">Mostrar Columnas:</label>
+            <div class="Selector-Columnas">
+                
+                ID:<input type="checkbox" checked="checked" id="ID" class="CB">
+                Modelo:<input type="checkbox"  checked="checked" id="cModelo" class="CB">
+                Año Fab:<input type="checkbox" checked="checked" id="cAniFab" class="CB">
+                Vel Max:<input type="checkbox" checked="checked" id="cVelMax" class="CB">
+                Alt Max:<input type="checkbox" checked="checked" id="cAltMax" class="CB">
+                Autonomia:<input type="checkbox" checked="checked" id="cAutonomia" class="CB">
+                Cant Pue:<input type="checkbox"  checked="checked" id="cCantPue" class="CB"> 
+                Cant Rue:<input type="checkbox" checked="checked" id="cCantRue" class="CB">
+                </div>
+
+        <table>
+            <thead> 
+            <tr>
+                <td><button id="btnID" class="btnTABLA">ID</button></td>
+                <td><button id="btnModelo" class="btnTABLA">Nombre</button></td>
+                <td><button id="btnAnioFab" class="btnTABLA">Año Fab</button></td>
+                <td><button id="btnVelMax" class="btnTABLA">Vel Max</button></td>
+                <td><button id="btnAltMax" class="btnTABLA">Alt Max</button></td>
+                <td><button id="btnAutonomia" class="btnTABLA">Autonomia</button></td>
+                <td><button id="btnCantPue" class="btnTABLA">Cant Pue</button></td>
+                <td><button id="btnCantRue" class="btnTABLA">Cant Rue</button></td>
+            </tr>
+        </thead>
+        <tbody id="vehiculo-container">
+            
+        </tbody>
+        </table>
+
+        <button id="btnAgregar">Agregar</button>
+
+        </form>
+    </div>
+
+    <div id="FrmABM">
+        <form class="FrmABM">
+            <h1>Formulario ABM</h1>
+
+            <div class="inputs">
+                <input type="number" id="txtId" placeholder="Ingrese su id:" readonly="true">
+                <input type="text" id="txtModelo" placeholder="Ingrese su modelo:">
+                <input type="number" id="txtAnioFab" placeholder="Ingrese su año de fabricacion:">
+                <input type="number" id="txtVelMax" placeholder="Ingrese su velocidad maxima:">
+                
+
+                <select id="SelectTipo">
+                        <option value="tVacio" selected="selected" disabled="disabled">Seleccione su Tipo</option>
+                        <option value="tAereo">Aereo</option>
+                        <option value="tTerrestre">Terrestre</option>
+                </select>
+
+                <input type="number" id="txtAM" placeholder="Ingrese su altura maxima:">
+                <input type="number" id="txtAutonomia" placeholder="Ingrese su autonomia:">
+                <input type="number" id="txtCantPue" placeholder="Ingrese cantidad de puertas:">
+                <input type="number" id="txtCantRue" placeholder="Ingrese su cantidad de ruedas:">
+                                
+                <button id="btnAlta">Alta</button> 
+                <button id="btnModificar">Modificar</button> 
+                <button id="btnEliminar">Eliminar</button> 
+                <button id="btnCancelar">Cancelar</button>
+            </div>
+            
+
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
